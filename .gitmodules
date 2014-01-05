@@ -12,5 +12,5 @@
 
 [submodule "webapp"]
 	path = webapp
-	url = git@github.com:tuidayne1991/fundable.git
+	url = git@git.assembla.com:drstartup.git
 	branch = master
