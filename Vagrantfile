@@ -21,7 +21,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
-  config.vm.synced_folder "./webapp/protected/runtime", "/vagrant/webapp/protected/runtime", :mount_options => ["dmode=777","fmode=666"]
+  config.vm.synced_folder "./webapp/protected/models", "/vagrant/webapp/protected/models", :mount_options => ["dmode=777","fmode=666"]
+  config.vm.synced_folder "./webapp/protected/controllers", "/vagrant/webapp/protected/controllers", :mount_options => ["dmode=777","fmode=666"]
+  config.vm.synced_folder "./webapp/protected/views", "/vagrant/webapp/protected/views", :mount_options => ["dmode=777","fmode=666"]
+config.vm.synced_folder "./webapp/protected/runtime", "/vagrant/webapp/protected/runtime", :mount_options => ["dmode=777","fmode=666"]
   config.vm.synced_folder "./webapp/assets", "/vagrant/webapp/assets", :mount_options => ["dmode=777","fmode=666"]
   config.vm.synced_folder "./webapp/images", "/vagrant/webapp/images", :mount_options => ["dmode=777","fmode=666"]
   config.vm.provider :virtualbox do |vb|
